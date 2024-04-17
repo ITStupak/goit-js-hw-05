@@ -1,7 +1,11 @@
 "use strict";
 
-
-
+const getTotalBalanceByGender = (users, gender) => {
+  let totalGenderBalance = 0; 
+  users.filter(user => user.gender === gender).map(user => user.balance).forEach((item) => {
+    totalGenderBalance += item; });
+  return totalGenderBalance;
+}
 
 const clients = [
 	{
